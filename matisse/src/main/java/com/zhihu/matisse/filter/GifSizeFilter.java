@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.zhihu.matisse.sample;
+package com.zhihu.matisse.filter;
 
 import android.content.Context;
 import android.graphics.Point;
 
 import com.zhihu.matisse.MimeType;
-import com.zhihu.matisse.filter.Filter;
+import com.zhihu.matisse.R;
 import com.zhihu.matisse.internal.entity.IncapableCause;
 import com.zhihu.matisse.internal.entity.Item;
 import com.zhihu.matisse.internal.utils.PhotoMetadataUtils;
@@ -27,13 +27,13 @@ import com.zhihu.matisse.internal.utils.PhotoMetadataUtils;
 import java.util.HashSet;
 import java.util.Set;
 
-class GifSizeFilter extends Filter {
+public class GifSizeFilter extends Filter {
 
     private int mMinWidth;
     private int mMinHeight;
     private int mMaxSize;
 
-    GifSizeFilter(int minWidth, int minHeight, int maxSizeInBytes) {
+    public GifSizeFilter(int minWidth, int minHeight, int maxSizeInBytes) {
         mMinWidth = minWidth;
         mMinHeight = minHeight;
         mMaxSize = maxSizeInBytes;
